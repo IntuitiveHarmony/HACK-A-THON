@@ -1,7 +1,8 @@
 <%- include('./partials/head', {pageName: employee.name}) %>
 <body>
-    <h1>Name: </h1>
-    <img src="" alt="Ogre image">
+    <h1>Name: <%= employee.name %></h1>
+    <img src="<%= employee.image %>" alt="Ogre image">
+    <h3>Role: <%= employee.roll %></h3>
     
 
 <%- include('./partials/footer') %>   
