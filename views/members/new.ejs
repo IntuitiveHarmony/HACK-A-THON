@@ -1,0 +1,22 @@
+<%- include('../partials/head', {pageName: "Home Page"}) %>
+<body>
+    <h1>Create A New Employee Profile</h1>
+    <form method="POST" action="/ems">
+        <div>
+            <label for="name">Enter Employee Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="image">Enter the url for the image</label>
+            <input type="text" name="image" id="image">
+        </div>
+        <div>
+            <label for="role">What Do You Actually Do?!?</label>
+            <input type="text" name="role" id="role">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<%- include('../partials/footer') %>   
+
+ 
