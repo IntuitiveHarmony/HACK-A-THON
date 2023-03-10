@@ -1,9 +1,26 @@
-# Wellcome to over worked ogres!
+# Welcome to over worked ogres!
 
 This is the project that we built for the Slackoffs Hackathon 2023. 
 
 
-## Objective
+## Product Description:
+
+- Corporate overlords often struggle to keep the leash on their empployees. Even the most dedicated staff memeber has found ways to elude the watchful eyes of corporate. We designed a place to allow underlings to createe a profile, upload a photo, and describe their role in the machine.
+
+## User Story:
+
+- As a user, I want to be able to register and place myself under the watchful eye of my employer. Adding my name, photo, and company role validates that I am "human" and contributing to the larger whole.
+
+## Technology Used:
+
+- We utilized express to render our html pages from ejs templates
+- Bootstrap was used to create forms and our saucy page design
+- MongoDB was utilized to host our employee profiles
+- Github was used to facilitate collaboration between devs located accross the country.
+- CSS was the digital frosting applied to our application. 
+
+## Challenging Code:
+- As one would expect, the instructional team did not struggle at all with the creation of this full functioning application created in a matter of hours. However, balancing a productive workflow while maintaining constont harassment and belittling of our students was difficult but well within our ability...clearly.
 ### Build Employee Management System(MEN Stack)
 
 - Apply Unit-2 concepts with team members to build MEN stack app.
@@ -28,4 +45,9 @@ _Your application must include the following:_
 - Add a Second Model with a relationship to Employee.
 - Add User Authentication( or OAuth)
 - Add Protected Routes 
+
+
+## Shout Outs:
+
+We want to shout out all the students of the General Assembly SEIR-0206 cohort. Choosing to step in the ring with your instructional team created a runway for our massive egos. Our success will be something we brag about in every cohort from this point on. Thank you for your humble sacrifice. 
 
