@@ -1,4 +1,4 @@
-<%- include('./partials/head', {pageName: employee.name}) %>
+<%- include('../partials/head', {pageName: "Home Page"}) %>
 <body>
     <h1>Create A New Employee Profile</h1>
     <form method="POST" action="/ems">
@@ -17,5 +17,6 @@
         <input type="submit" value="Submit">
     </form>
 </body>
+<%- include('../partials/footer') %>   
 
-<%- include('./partials/footer') %>   
+ 

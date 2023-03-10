@@ -19,13 +19,13 @@ router.get('/', async (req, res, next) => {
 });
 
 router.get('/new', (req, res) => {
-    res.render('ems/new.ejs');
+    res.render('members/new.ejs');
 });
 
 router.post('/', async (req, res, next) => {
     try {
         console.log(req.body);
-        const newEmloyee = await Employees.create(req.body);
+        const newEmployee = await Employees.create(req.body);
         // mySeedData.push(newArtist);
         console.log(newEmployee);
         res.redirect('/')
