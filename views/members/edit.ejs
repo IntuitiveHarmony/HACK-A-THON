@@ -2,29 +2,39 @@
 <body>
 
     <%- include('../partials/nav', {pageName: "Edit Page"}) %>
+    <main>
+
+        <div class="container my-2 py-2">
     <div class="container my-2 py-2">
         <div class="jumbo jumbotron-fluid">
     <h1 class="text-center">Edit your Ogre here</h1>
     <form method="POST" action="/ems/<%= personToEdit._id %>?_method=PUT">
-        <div>
-            <label for="name">Update the Ogre's name</label>
-            <input type="text" name="name" id="name" value=<%= personToEdit.name%>>
+        <div class="mb-2">
+            <label class="form-label" for="name">Update the Ogre's name</label>
+            <input class="form-control"  type="text" name="name" id="name" value=<%= personToEdit.name%>>
         </div>
-        <div>
-            <label for="image">Update the Ogre's image</label>
-            <input type="text" name="image" id="image" value=<%= personToEdit.image %>>
+        <div class="mb-2">
+            <label class="form-label" for="image">Update the Ogre's image</label>
+            <input class="form-control"  type="text" name="image" id="image" value=<%= personToEdit.image %>>
         </div>
-        <div>
-            <label for="role">What is their role?</label>
-            <input type="text" name="role" id="role" value=<%= personToEdit.role %>>
+        <div class="mb-2">
+            <label class="form-label"  for="role">What is their role?</label>
+            <input class="form-control" type="text" name="role" id="role" value=<%= personToEdit.role %>>
         </div>
-        <input type="submit" value="Edit <%= personToEdit.name %>">
+        <div class="text-center my-2 py-2">
+        <input type="submit" class="btn btn-warning" value="Edit <%= personToEdit.name %>">
+        </div>
     </form>
     
 
 
 
 </div>
+
+</div>
+
+</main>
+
 <footer>
     <%- include('../partials/footer') %>
 </footer>
