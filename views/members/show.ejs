@@ -13,12 +13,13 @@
                     <p>Role: <%= employee.role %>
                     </p>
                 </div>
-                <form class="text-center" method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
-                    <input class="btn btn-danger my-2" type="submit" value="Delete Aritst">
-                </form>
-                <div class="text-center">
+                <div class="text-center my-2">
                     <a class="btn btn-warning" href="/ems/<%= employee._id %>/edit">Update Employee</a>
                 </div>
+                <form class="text-center my-2 p-2" method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
+                    <input class="btn btn-danger my-2" type="submit" value="Delete">
+                </form>
+                
         </div>
       
     </div>
