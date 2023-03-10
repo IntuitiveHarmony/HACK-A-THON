@@ -6,6 +6,8 @@ const emsController = require('./controllers/ems');
 
 app.set('view engine', 'ejs');
 
+
+
 // Routes
 app.use('/ems', emsController);
 

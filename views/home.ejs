@@ -1,7 +1,14 @@
 <%- include('./partials/head', {pageName: "Home Page"}) %>
 <body>
-    <h1>here is our home page</h1>
+    <%- include('./partials/nav', {pageName: "Home Page" }) %>
+    <div class="container">
+<h1>here is our home page</h1>
 
-<%- include('./partials/footer') %>   
+
+<footer>
+    <%- include('./partials/footer') %>
+</footer>
+
+</div>
 </body>
 </html>
