@@ -12,21 +12,18 @@
                     </h5>
                     <p>Role: <%= employee.role %>
                     </p>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary d-flex justify-content-center">Email</a>
                 </div>
-                <form method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
+                <form class="text-center" method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
                     <input class="btn btn-danger my-2" type="submit" value="Delete Aritst">
                 </form>
+                <div class="text-center">
+                    <a class="btn btn-warning" href="/ems/<%= employee._id %>/edit">Update Employee</a>
+                </div>
         </div>
       
     </div>
     
-    <div>
-        <a class="btn btn-warning" href="/ems/<%= employee._id %>/edit">Update Employee</a>
-    </div>
+    
     
 
 <%- include('../partials/footer') %>   
