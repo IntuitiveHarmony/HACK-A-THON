@@ -10,6 +10,10 @@
     <h1 class="text-center">Edit your Ogre here</h1>
     <form method="POST" action="/ems/<%= personToEdit._id %>?_method=PUT">
         <div class="mb-2">
+            <label class="form-label" for="name">Update Employee ID</label>
+            <input class="form-control"  type="text" name="employeeId" id="name" value=<%= personToEdit.employeeId%>>
+        </div>
+        <div class="mb-2">
             <label class="form-label" for="name">Update the Ogre's name</label>
             <input class="form-control"  type="text" name="name" id="name" value=<%= personToEdit.name%>>
         </div>
