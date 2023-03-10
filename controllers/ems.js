@@ -8,19 +8,23 @@ let mySeedData = [
     {
         name: "Anita Bath",
         image: "https://cdn.midjourney.com/ce7495a0-da54-4964-b19e-03896d57c987/grid_0.png",
-        role: "Janitor"
+        role: "Janitor",
+        employeeId: "1",
     }, {
-        name: "Kareem O’Weet",
+        name: "Kareem O'Weet",
         image: "https://cdn.midjourney.com/281f4606-950e-4911-8c0f-d986e3c1b6fa/grid_0.png",
-        role: "CEO"
+        role: "CEO",
+        employeeId: "2",
     }, {
         name: "Lee Nover",
         image: "https://cdn.midjourney.com/82917788-2881-41d6-9b11-455b9a94a6bc/grid_0.png",
-        role: "Dev"
+        role: "Dev",
+        employeeId: "3",
     }, {
         name: "JP",
         image: "https://i.imgur.com/N1GVuj6.jpg",
-        instrument: "An incredible slug"
+        instrument: "An incredible slug",
+        employeeId: "4",
     }
 ]
 
