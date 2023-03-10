@@ -1,24 +1,24 @@
-<%- include('./partials/head') %>
+<%- include('../partials/head') %>
 <body>
 
-    <%- include('./partials/nav', {pageName: "Edit Page"}) %>
-    <div class="container">
+    <%- include('../partials/nav', {pageName: "Edit Page"}) %>
+    <div class="container my-2 py-2">
         <div class="jumbo jumbotron-fluid">
-    <h1>Edit your Ogre here</h1>
-    <form method="POST" action="/musicians/<%= employee._id %>?_method=PUT">
+    <h1 class="text-center">Edit your Ogre here</h1>
+    <form method="POST" action="/ems/<%= personToEdit._id %>?_method=PUT">
         <div>
             <label for="name">Update the Ogre's name</label>
-            <input type="text" name="name" id="name" value=<%= employee.name%>>
+            <input type="text" name="name" id="name" value=<%= personToEdit.name%>>
         </div>
         <div>
             <label for="image">Update the Ogre's image</label>
-            <input type="text" name="image" id="image" value=<%= employee.image %>>
+            <input type="text" name="image" id="image" value=<%= personToEdit.image %>>
         </div>
         <div>
-            <label for="instrument">What is their role?</label>
-            <input type="text" name="role" id="role" value=<%= employee.instrument %>>
+            <label for="role">What is their role?</label>
+            <input type="text" name="role" id="role" value=<%= personToEdit.role %>>
         </div>
-        <input type="submit" value="Edit <%= employee.name %>">
+        <input type="submit" value="Edit <%= personToEdit.name %>">
     </form>
     
 
@@ -26,7 +26,7 @@
 
 </div>
 <footer>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 </footer>
 
 </div>

@@ -8,18 +8,23 @@
     <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
             <th scope="col">Image</th>
+            <th scope="col">First</th>
             <th scope="col">Role</th>
+            <th scope="col">Edit</th>
         </tr>
     </thead>
     <tbody>
         <% employees.forEach(emp =>{ %> 
         <tr>
-            <th scope="row"><%= emp.employeeId %></th>
+            <th scope="row"><%= emp.employeeId%></th>
+            <td>
+             <img style="height: 10vh;" src=<%=emp.image %> alt=<%= emp.name %>>
+              
+            </td>
             <td><%= emp.name %></td>
-            <td>Otto</td>
             <td><%=emp.role %></td>
+            <td><a class="text-center d-flex justify-content-center btn my-2 btn-info" href="/ems/<%=emp._id %>">Details</a></td>
         </tr>
         <% }) %>
     </tbody>

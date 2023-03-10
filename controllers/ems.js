@@ -42,6 +42,8 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+// Seed Route
+
 router.get('/seed', async (req, res, next) => {
     try {
         const deletedOldOnes = await Employees.deleteMany({});
@@ -54,9 +56,38 @@ router.get('/seed', async (req, res, next) => {
     }
 })
 
+// New Route
 router.get('/new', (req, res) => {
     res.render('members/new.ejs');
 });
+
+// Show Route
+router.get('/:id', async (req, res, next) => {
+    try {
+        console.log(req.params)
+        const employee = await Employees.findById(req.params.id);
+        console.log(employee);
+        const context = {
+            employee: employee
+        }
+        res.render('members/show.ejs', context);
+    } catch(err) {
+        console.log(err);
+        return next();
+    }
+})
+
+// Update Route
+router.get('/:id/edit', async (req, res, next) => {
+    try {
+        const personToEdit = await Employees.findById(req.params.id);
+        console.log(personToEdit);
+        res.render('members/edit.ejs', {personToEdit: personToEdit})
+    } catch(err) {
+        console.log(err);
+        return next();
+    }
+})
 
 router.post('/', async (req, res, next) => {
     try {
@@ -71,15 +102,15 @@ router.post('/', async (req, res, next) => {
     }
 })
 
-router.delete('/:id', async (req, res, next) => {
+router.put('/:id', async(req, res, next) => {
     try {
-        console.log(req.params);
-        console.log("I'm hitting the delete route");
-        const itemGettingDeleted = await Employees.findByIdAndDelete(req.params.id);
-        console.log(itemGettingDeleted);
+        console.log(req.params.id);
+        console.log(req.body);
+        const updateItem = await Employees.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updateItem);
         res.redirect('/ems');
-    } catch(stuff) {
-        console.log(stuff);
+    } catch(err) {
+        console.log(err);
         return next();
     }
 })
