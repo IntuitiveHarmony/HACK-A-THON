@@ -6,9 +6,11 @@ const emsController = require('./controllers/ems');
 
 app.set('view engine', 'ejs');
 
+
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: false }));
+
 
 // Routes
 app.use('/ems', emsController);
