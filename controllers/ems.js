@@ -78,6 +78,16 @@ router.get('/:id', async (req, res, next) => {
 })
 
 // Update Route
+router.get('/:id/edit', async (req, res, next) => {
+    try {
+        const personToEdit = await Employees.findById(req.params.id);
+        console.log(personToEdit);
+        res.render('members/edit.ejs', {personToEdit: personToEdit})
+    } catch(err) {
+        console.log(err);
+        return next();
+    }
+})
 
 router.post('/', async (req, res, next) => {
     try {
@@ -86,6 +96,19 @@ router.post('/', async (req, res, next) => {
         mySeedData.push(newEmployee);
         console.log(newEmployee);
         res.redirect('/')
+    } catch(err) {
+        console.log(err);
+        return next();
+    }
+})
+
+router.put('/:id', async(req, res, next) => {
+    try {
+        console.log(req.params.id);
+        console.log(req.body);
+        const updateItem = await Employees.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updateItem);
+        res.redirect('/ems');
     } catch(err) {
         console.log(err);
         return next();
