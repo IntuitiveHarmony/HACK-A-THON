@@ -2,9 +2,9 @@
 <body>
 
     <%- include('./partials/nav', {pageName: "Edit Page"}) %>
-    <div class="container">
+    <div class="container my-2 py-2">
         <div class="jumbo jumbotron-fluid">
-    <h1>Edit your Ogre here</h1>
+    <h1 class="text-center">Edit your Ogre here</h1>
     <form method="POST" action="/musicians/<%= employee._id %>?_method=PUT">
         <div>
             <label for="name">Update the Ogre's name</label>
