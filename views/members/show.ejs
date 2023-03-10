@@ -17,10 +17,11 @@
                         content.</p>
                     <a href="#" class="btn btn-primary d-flex justify-content-center">Email</a>
                 </div>
+                <form method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
+                    <input class="btn btn-danger my-2" type="submit" value="Delete Aritst">
+                </form>
         </div>
-        <form method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
-            <input class="btn btn-danger my-2" type="submit" value="Delete Aritst">
-        </form>
+      
     </div>
     
     <div>
