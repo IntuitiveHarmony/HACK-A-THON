@@ -1,8 +1,31 @@
 <%- include('../partials/head', {pageName: employee.name}) %>
 <body>
-    <h1>Name: <%= employee.name %></h1>
+    <!-- <h1>Name: <%= employee.name %></h1>
     <img src="<%= employee.image %>" alt="Ogre image">
-    <h3>Role: <%= employee.role %></h3>
+    <h3>Role: <%= employee.role %></h3> -->
+<%- include('../partials/nav', {pageName: employee.name}) %>
+    <div class="container my-2 py-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=<%=employee.image %> alt=<%= employee.name %>>
+                <div class="card-body">
+                    <h5 class="card-title">Name: <%= employee.name %>
+                    </h5>
+                    <p>Role: <%= employee.role %>
+                    </p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary d-flex justify-content-center">Email</a>
+                </div>
+        </div>
+        <form method="POST" action="/ems/<%= employee._id %>?_method=DELETE">
+            <input class="btn btn-danger my-2" type="submit" value="Delete Aritst">
+        </form>
+    </div>
+    
+    <div>
+        <a class="btn btn-warning" href="/ems/<%= employee._id %>/edit">Update Employee</a>
+    </div>
     
 
 <%- include('../partials/footer') %>   
