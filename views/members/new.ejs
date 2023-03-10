@@ -1,22 +1,29 @@
 <%- include('../partials/head', {pageName: "Home Page"}) %>
 <%- include("../partials/nav") %>
 <body>
-    <h1>Create A New Employee Profile</h1>
+    <div class="container">
+    <h1 class="text-center">Create A New Employee Profile</h1>
+    <div class="mb-2">
     <form method="POST" action="/ems">
-        <div>
+        <div class="mb-2">
             <label for="name">Enter Employee Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" class="form-control">
         </div>
-        <div>
+        <div class="mb-2">
             <label for="image">Enter the url for the image</label>
-            <input type="text" name="image" id="image">
+            <input type="text" name="image" id="image" class="form-control">
         </div>
-        <div>
+        <div class="mb-2">
             <label for="role">What Do You Actually Do?!?</label>
-            <input type="text" name="role" id="role">
+            <input type="text" name="role" id="role" class="form-control">
         </div>
-        <input type="submit" value="Submit">
+        <div class="text-center my-2 py-2">
+    <input type="submit" value="Add Employee" class="btn btn-success" class="form-control">
+        </div>
+        
     </form>
+    </div>
+    </div>
 </body>
 <%- include('../partials/footer') %>   
 
