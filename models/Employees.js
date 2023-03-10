@@ -14,7 +14,8 @@ const employeesSchema = new mongoose.Schema(
         role: {
             type: String,
             default: "Grunt"
-        }
+        },
+        employeeId: String,
     },
     {
         timestamps: true
